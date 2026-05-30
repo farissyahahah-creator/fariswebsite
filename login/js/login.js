@@ -15,9 +15,10 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     const data = await res.json();
 
     if (data.status === "success") {
-        // simpan username
-            localStorage.setItem("username", data.username);
-            window.location.href = "../index.html";
+        localStorage.setItem("username", data.username);
+        localStorage.setItem("isLoggedIn", "true"); 
+        window.location.href = "../index.html";
+    }
          
     // } else {
     //     document.getElementById("message").innerText = "Username / Password salah";alert("Login gagal");
