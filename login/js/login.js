@@ -15,9 +15,9 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     const data = await res.json();
 
     if (data.status === "success") {
-        localStorage.setItem("username", data.username);
-        localStorage.setItem("isLoggedIn", "true"); 
-        window.location.href = "../index.html";
+        // simpan username
+            localStorage.setItem("username", data.username);
+            window.location.href = "../index.html";
     }
          
     // } else {
